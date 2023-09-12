@@ -6,17 +6,36 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/HtmlCss.test.tsx
+FAIL src/functions.test.ts
+  ● Testing the basic functions › Testing the convertYesNo function
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: null
+
+      47 |
+      48 |     test("Testing the convertYesNo function", () => {
+    > 49 |         expect(convertYesNo("yes")).toBe(true);
+         |                                     ^
+      50 |         expect(convertYesNo("YES")).toBe(true);
+      51 |         expect(convertYesNo("NO")).toBe(false);
+      52 |         expect(convertYesNo("no")).toBe(false);
+
+      at Object.<anonymous> (src/functions.test.ts:49:37)
+
 PASS src/text.test.tsx
 PASS src/App.test.tsx
-----------|---------|----------|---------|---------|-------------------
-File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------|---------|----------|---------|---------|-------------------
-All files |     100 |      100 |     100 |     100 |                   
- App.tsx  |     100 |      100 |     100 |     100 |                   
-----------|---------|----------|---------|---------|-------------------
+--------------|---------|----------|---------|---------|-------------------
+File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------|---------|----------|---------|---------|-------------------
+All files     |    90.9 |       80 |     100 |    90.9 |                   
+ App.tsx      |     100 |      100 |     100 |     100 |                   
+ functions.ts |      90 |       80 |     100 |      90 | 55,57             
+--------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 3 passed, 3 total
-Tests:       9 passed, 9 total
+Test Suites: 1 failed, 3 passed, 4 total
+Tests:       1 failed, 13 passed, 14 total
 Snapshots:   0 total
-Time:        3.139 s
+Time:        3.504 s
 Ran all test suites.
