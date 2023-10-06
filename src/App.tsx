@@ -27,6 +27,9 @@ function App(): JSX.Element {
             </header>
 
             <hr></hr>
+<<<<<<< HEAD
+            <DoubleHalf></DoubleHalf>
+=======
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
