@@ -8,7 +8,7 @@ export function CheckAnswer({
 }): JSX.Element {
     const [answer, setAnswer] = useState<string>("");
 
-    function updateDescription(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    function updateAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
         setAnswer(event.target.value);
     }
     return (
@@ -19,10 +19,10 @@ export function CheckAnswer({
                     as="textarea"
                     rows={3}
                     value={answer}
-                    onChange={updateDescription}
+                    onChange={updateAnswer}
                 />
             </Form.Group>
-            answer === {expectedAnswer} ? <div>✔️</div>: <div>❌</div>;
+            <span>{answer === expectedAnswer ? "✔️" : "❌"}</span>
         </div>
     );
 }
